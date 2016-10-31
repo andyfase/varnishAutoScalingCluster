@@ -4,22 +4,22 @@
 
 backend http_backend1 {
     .host = "127.0.0.1";
-    .port = "10000";
+    .port = "81";
 }
 
 backend http_backend2 {
     .host = "127.0.0.1";
-    .port = "10000";
+    .port = "81";
 }
 
 backend varnish_backend1 {
   .host = "127.0.0.1";
-  .port = "8080";
+  .port = "80";
 }
 
 backend varnish_backend2 {
   .host = "127.0.0.1";
-  .port = "8081";
+  .port = "80";
 }
 
 sub backend_init {
