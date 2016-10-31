@@ -17,7 +17,7 @@ vcl 4.0;
 
 import directors;
 
-include "backend.vcl";
+include "backend_auto.vcl";
 include "vcl_frontend.vcl";
 include "vcl_backend.vcl";
 
