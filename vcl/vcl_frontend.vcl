@@ -33,7 +33,7 @@ sub deliver_frontend {
   unset resp.http.Age;
 
   # add frontend varnish server IP as response header just for demonstration purposes!
-  set resp.http.X-Varnish-Cluster-Frontend-Host = server.ip;
+  set resp.http.X-Varnish-Cluster-Frontend-Host = server.hostname;
 
   return(deliver);
 }

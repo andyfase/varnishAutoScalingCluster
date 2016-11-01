@@ -19,7 +19,7 @@ sub deliver_backend {
   set resp.http.X-Varnish-Cluster-Backend = req.xid;
 
   # add backend varnish server IP as response header just for demonstration purposes!
-  set resp.http.X-Varnish-Cluster-Backend-Host = server.ip;
+  set resp.http.X-Varnish-Cluster-Backend-Host = server.hostname;
 
   return(deliver);
 }
