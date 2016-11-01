@@ -32,5 +32,8 @@ sub deliver_frontend {
   set resp.http.X-Cache = resp.http.Age;
   unset resp.http.Age;
 
+  # add frontend varnish server IP as response header just for demonstration purposes!
+  set resp.http.X-Varnish-Cluster-Frontend-Host = server.ip;
+
   return(deliver);
 }
