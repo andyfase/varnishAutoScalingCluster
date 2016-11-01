@@ -11,6 +11,9 @@ sub recv_backend {
 sub backend_response_backend {
   set beresp.http.X-BE = bereq.xid;
 
+  ## set default cache of 60m
+  set beresp.ttl = 60m;
+
   return(deliver);
 }
 
