@@ -21,5 +21,8 @@ sub deliver_backend {
   # add backend varnish server IP as response header just for demonstration purposes!
   set resp.http.X-Varnish-Cluster-Backend-Host = server.hostname;
 
+  # set Age header to X-Cache, on frontend we will remove Age header completly.
+  set resp.http.X-Cache = resp.http.Age;
+
   return(deliver);
 }

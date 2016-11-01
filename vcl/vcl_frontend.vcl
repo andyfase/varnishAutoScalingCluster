@@ -28,8 +28,7 @@ sub deliver_frontend {
   unset resp.http.Server;
   unset resp.http.Via;
 
-  # rename Age header to X-Cache
-  set resp.http.X-Cache = resp.http.Age;
+  # unset age header
   unset resp.http.Age;
 
   # add frontend varnish server IP as response header just for demonstration purposes!!
